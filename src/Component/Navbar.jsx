@@ -27,7 +27,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <a className="primary-Btn">Sign In</a>
-                <a className="primary-Btn ml-4 bg-[#59C6D2]" style={{ backgroundColor: '#59C6D2' }}>Sign up</a>  </div>
+                <a className="primary-Btn ml-4 " style={{ backgroundColor: '#59C6D2' }}>Sign up</a>  </div>
         </div>
     );
 };

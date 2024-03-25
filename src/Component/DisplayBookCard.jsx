@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const DisplayBookCard = ({ cardData }) => {
 
     const {bookId, image, bookName, author, tags, rating, category } = cardData;
-
+// console.log(bookId);
     return (
-        <Link className=''  to={`/bookDtails/${bookId}`}>
+        <Link  to={`/bookDtails/${bookId}`}  >
         <div className="card  bg-base-100 shadow-xl border-2 hover:border-2 hover:border-gray-500">
             <figure className="px-10 pt-10 h-[200px] rounded-xl">
                 <img src={image} alt="Shoes" className="rounded-xl h-full" />
@@ -33,6 +33,7 @@ const DisplayBookCard = ({ cardData }) => {
         </Link>
     );
 };
+// 
 
 export default DisplayBookCard;
 DisplayBookCard.propTypes = {

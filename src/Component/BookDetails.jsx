@@ -1,35 +1,37 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import DisplayBookCard from "./DisplayBookCard";
+import DisplayDetailsCard from "./DisplayDetailsCard";
 
 const BookDetails = () => {
-    const {bookid}= useParams();
-    const intBookId= parseInt(bookid);
-    const bookDatas= useLoaderData();
-    const[  detailsData,setDetailsData]=useState([]);
-
-    const bookData=bookDatas.find((data)=>data.bookId===intBookId )
-    // const bookData=bookDatas.find((data)=>console.log(data.bookId,bookid) )
-
-    // console.log( intBookId);
-    console.log(bookData);
-
-    // useEffect(()=>{
-
-    //     if(bookDatas.length>0){
-    //         const bookData=bookDatas.find((data)=>data.bookId===bookid )
-    //         setDetailsData(bookData)
-    //     }
+    const { bookid } = useParams();
     
-    // },[bookid])
-    
+
+    const intBookId = parseInt(bookid);
   
+    const [bookDatas, setBookDatas] = useState([])
 
-   
-   
-    // 
+    useEffect(() => {
+        fetch('../bookCardData.json')
+            .then(res => res.json())
+            .then(data => setBookDatas(data))
+
+    }, [])
+ 
+
+    let detailsData = [];
+
+    if (bookDatas.length > 0) {
+        const bookData = bookDatas.find((data) => data.bookId === intBookId)
+        detailsData = bookData;
+    }
+
+
+    console.log(detailsData);
+
     return (
         <div>
-            book details
+           <DisplayDetailsCard key={detailsData.bookId} detailsData={detailsData} > </DisplayDetailsCard>
         </div>
     );
 };

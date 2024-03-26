@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const DisplayReadCard = ({data}) => {
-    console.log(data);
-    const { bookId, image, bookName, author, tags, rating, category, yearOfPublishing, publisher, totalPages, review } = data;
+  
+    const { bookId, image, bookName, author, tags, rating, category, yearOfPublishing, publisher, totalPages,  } = data;
   
     return (
         <div>
@@ -37,7 +37,7 @@ const DisplayReadCard = ({data}) => {
                <div className="py-5  flex gap-4">
                <h2 className=" p-3 font-semibold text-[#1075f1ea] bg-[#328EFF26] rounded-full inline"> Category : {category}</h2>
                <h2 className=" p-3 font-semibold text-[#bc8127] bg-[#FFAC3326] rounded-full inline"> Rating : {rating}</h2>
-               <Link to={`/bookDtails/${bookId}`}><button className="primary-Btn pbtn roundef ">View Details</button></Link>           
+               <Link to={`/bookDtails/${bookId}`}><button className="primary-Btn pbtn  ">View Details</button></Link>           
                </div>
               
                

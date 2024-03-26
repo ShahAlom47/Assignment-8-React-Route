@@ -1,39 +1,44 @@
 
-
-import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
+// import { useEffect, useState } from "react";
 import DisplayReadCard from "./DisplayReadCard";
 
 
-const WishlistBook = () => {
+const WishlistBook = ({wishBookData}) => {
 
-    const getLocalStoreData=(key)=>{
+   
 
-        const localDatas= localStorage.getItem(key);
-        if(localDatas){
-            return JSON.parse(localDatas);
-        }
-        return[];
-    }
-    const localReadData= getLocalStoreData('wishList')
+    // const getLocalStoreData=(key)=>{
+
+    //     const localDatas= localStorage.getItem(key);
+    //     if(localDatas){
+    //         return JSON.parse(localDatas);
+    //     }
+    //     return[];
+    // }
+    // const localReadData= getLocalStoreData('wishList')
  
-    const [bookDatas, setBookDatas] = useState([])
+    // const [bookDatas, setBookDatas] = useState([])
 
-    useEffect(() => {
-        fetch('../bookCardData.json')
-            .then(res => res.json())
-            .then(data => setBookDatas(data))
+    // useEffect(() => {
+    //     fetch('../bookCardData.json')
+    //         .then(res => res.json())
+    //         .then(data => setBookDatas(data))
 
-    }, [])
+    // }, [])
 
-    const bookData = bookDatas.filter(data => localReadData.includes(data.bookId));
+    // const bookData = bookDatas.filter(data => localReadData.includes(data.bookId));
+
+  
 
 
 
-    if(localReadData.length>0){
+
+    if(wishBookData.length>0){
         return (
             <div>
                {
-                bookData.map((data,indx)=><DisplayReadCard data={data} key={indx} ></DisplayReadCard>)
+                wishBookData.map((data,indx)=><DisplayReadCard data={data} key={indx} ></DisplayReadCard>)
                }
             </div>
         )
@@ -47,3 +52,6 @@ const WishlistBook = () => {
 };
 
 export default WishlistBook;
+WishlistBook.propTypes = {
+    wishBookData:PropTypes.array.isRequired
+    }

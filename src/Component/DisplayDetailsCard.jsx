@@ -1,5 +1,9 @@
 
 import PropTypes from 'prop-types';
+import { useState } from 'react';
+import { CiHeart } from "react-icons/ci";
+import { IoIosHeart } from "react-icons/io";
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,7 +31,6 @@ const DisplayDetailsCard = ({ detailsData }) => {
 
            }
            else{
-            //  toast("This is already in the list")
              toast.warn('This is already in the list', )
            }
    
@@ -59,6 +62,26 @@ const DisplayDetailsCard = ({ detailsData }) => {
            }
    
     }
+
+const [click,setClick]=useState(false);
+    const favBtnHandel=(id,key)=>{
+
+        setClick(!click)
+        const localdata= getLocalStoreData(key)  
+        
+        const isExists = localdata.find(bId=>bId===id);
+       if(!isExists){
+        localdata.push(id);
+        localStorage.setItem(key,JSON.stringify(localdata))
+        toast("Successfully added to Favorite list")
+
+       }
+       else{
+         toast.warn('This is already in the list', )
+       }
+
+    }
+
  
 
     const { bookId, image, bookName, author, tags, rating, category, yearOfPublishing, publisher, totalPages, review } = detailsData;
@@ -101,9 +124,10 @@ const DisplayDetailsCard = ({ detailsData }) => {
                     <p className="text-black font-semibold  ">{rating}</p>
                 </div>
                 </div>
-                <div className='my-5'>
+                <div className='my-5 flex'>
                 <button onClick={()=>readBtnHandel(bookId,'readList')} className='btn btn-outline '>Read</button>
                 <button onClick={()=>wishBtnHandel(bookId,'wishList')} className=" btn primary-Btn ml-4 " style={{ backgroundColor: '#59C6D2' }}>Wishlist</button>
+                <button onClick={()=>favBtnHandel(bookId,'favList')} className="  ml-4 flex items-center  px-3 btn "  >{click?  <IoIosHeart /> :<CiHeart /> }  Add to Favorite</button>
                 </div>
                
             </div>

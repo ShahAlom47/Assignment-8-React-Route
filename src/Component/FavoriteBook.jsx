@@ -1,9 +1,30 @@
+import DisplayFavBook from "./DisplayFavBook";
+import useGetdata from "./coustumHock";
 
 
 const FavoriteBook = () => {
+
+    const getLocalStoreData = (key) => {
+
+        const localDatas = localStorage.getItem(key);
+        if (localDatas) {
+            return JSON.parse(localDatas);
+        }
+        return [];
+    }
+
+    const LocalSdata = getLocalStoreData('favList')
+   
+    const datas = useGetdata();
+
+    const readBookDat = datas.filter(data => LocalSdata.includes(data.bookId));
+   
+   
     return (
         <div>
-            favorite book
+            {
+                readBookDat.map((book,indx)=> <DisplayFavBook book={book} key={indx}></DisplayFavBook>)
+            }
         </div>
     );
 };

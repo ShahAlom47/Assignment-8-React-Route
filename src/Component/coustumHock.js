@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 
 
-const useSort = () => {
-
+const useGetdata = () => {
+    const [bookDatas, setBookDatas] = useState([]);
+ 
+    
+    useEffect(() => {
+        fetch('../bookCardData.json')
+            .then(res => res.json())
+            .then(data => {
+                setBookDatas(data);
+                // setSortData(data); 
+            });
+    }, []);
+    
+return  bookDatas ;
 }
   
 
-export default useSort;
+export default useGetdata;

@@ -30,7 +30,7 @@ const PageToRead = () => {
     console.log(readBookDat);
     return (
         <div  className='flex justify-center py-9'>
-            <BarChart width={730} height={250} data={readBookDat}>
+            <BarChart width={830} height={450} data={readBookDat}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey='bookName' />
                 <YAxis />

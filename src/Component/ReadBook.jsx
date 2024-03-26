@@ -1,31 +1,9 @@
-import { useEffect, useState } from "react";
+
 import DisplayReadCard from "./DisplayReadCard";
+import PropTypes from 'prop-types';
 
 
 const ReadBook = ({readBookData}) => {
-
-    // const getLocalStoreData=(key)=>{
-
-    //     const localDatas= localStorage.getItem(key);
-    //     if(localDatas){
-    //         return JSON.parse(localDatas);
-    //     }
-    //     return[];
-    // }
-    // const localReadData= getLocalStoreData('readList')
- 
-    // const [bookDatas, setBookDatas] = useState([])
-
-    // useEffect(() => {
-    //     fetch('../bookCardData.json')
-    //         .then(res => res.json())
-    //         .then(data => setBookDatas(data))
-
-    // }, [])
-
-    // const bookData = bookDatas.filter(data => localReadData.includes(data.bookId));
-
-
 
     if(readBookData.length>0){
         return (
@@ -45,3 +23,6 @@ const ReadBook = ({readBookData}) => {
 };
 
 export default ReadBook;
+ReadBook.propTypes = {
+    readBookData:PropTypes.object.isRequired
+    }

@@ -1,5 +1,7 @@
-import { key } from 'localforage';
+
 import PropTypes from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DisplayDetailsCard = ({ detailsData }) => {
 
@@ -21,8 +23,12 @@ const DisplayDetailsCard = ({ detailsData }) => {
             console.log(localdata);
             localdata.push(id);
             localStorage.setItem(key,JSON.stringify(localdata))
-            
+            toast("Successfully added to readlist")
 
+           }
+           else{
+            //  toast("This is already in the list")
+             toast.warn('This is already in the list', )
            }
    
     }
@@ -35,18 +41,29 @@ const DisplayDetailsCard = ({ detailsData }) => {
         
             const isExistsReadList = readListLocalData.find(bId=>bId===id);
             const isExists = localdata.find(bId=>bId===id);
+
            if(!isExists && !isExistsReadList){
             console.log(localdata);
             localdata.push(id);
             localStorage.setItem(key,JSON.stringify(localdata))
+            toast("Successfully added to Wish list")
 
+           }
+
+           else if(!isExists){
+            toast.warn('This is already read', )
+           }
+           else{
+            //  toast("This is already in the list")
+             toast.warn('This is already in the list', )
            }
    
     }
  
 
     const { bookId, image, bookName, author, tags, rating, category, yearOfPublishing, publisher, totalPages, review } = detailsData;
-
+    console.log(tags)
+   
     console.log(bookId);
     return (
         <div className="flex bg-base-100 shadow-xl my-10 p-4">
@@ -61,9 +78,9 @@ const DisplayDetailsCard = ({ detailsData }) => {
 
                 <div className='flex gap-3 flex-wrap justify-start'>
                     <p className="text-black font-semibold">Tags:</p>
-                    {
-                        // tags.map((tag) => <p className='bg-gray-200 px-2 py-1 rounded-full  text-[#23BE0A] font-medium ' key={tag + 1}>{tag}</p>)
-                    }
+                    
+                    <p>{tags}</p>
+                 
                 </div>
                 <hr />
                 <div className='my-4'>
@@ -90,7 +107,7 @@ const DisplayDetailsCard = ({ detailsData }) => {
                 </div>
                
             </div>
-           
+            <ToastContainer />
            
         </div>
     );

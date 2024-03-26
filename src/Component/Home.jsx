@@ -1,5 +1,5 @@
 import Banner from "./Banner";
-import { useLoaderData } from "react-router-dom";
+
 import DisplayBookCard from "./DisplayBookCard";
 import { useEffect, useState } from "react";
 

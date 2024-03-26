@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import DisplayBookCard from "./DisplayBookCard";
+// import DisplayBookCard from "./DisplayBookCard";
 import DisplayDetailsCard from "./DisplayDetailsCard";
 
 const BookDetails = () => {

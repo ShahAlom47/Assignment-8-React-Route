@@ -32,3 +32,6 @@ color: aliceblue;
   border-radius: 6px;
   padding:  2px 4px;
 }
+.pbtn{
+    border-radius: 9999px;
+}

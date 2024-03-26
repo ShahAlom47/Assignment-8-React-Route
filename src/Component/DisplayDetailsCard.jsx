@@ -1,6 +1,49 @@
+import { key } from 'localforage';
 import PropTypes from 'prop-types';
 
 const DisplayDetailsCard = ({ detailsData }) => {
+
+    const getLocalStoreData=(key)=>{
+
+        const localDatas= localStorage.getItem(key);
+        if(localDatas){
+            return JSON.parse(localDatas);
+        }
+        return[];
+    }
+
+    const readBtnHandel =(id,key)=>{
+        console.log(id);
+        const localdata= getLocalStoreData(key)  
+        
+            const isExists = localdata.find(bId=>bId===id);
+           if(!isExists){
+            console.log(localdata);
+            localdata.push(id);
+            localStorage.setItem(key,JSON.stringify(localdata))
+            
+
+           }
+   
+    }
+ 
+    const wishBtnHandel =(id,key)=>{
+        console.log(id);
+        const localdata= getLocalStoreData(key)  
+        const readListLocalData= getLocalStoreData('readList')  
+
+        
+            const isExistsReadList = readListLocalData.find(bId=>bId===id);
+            const isExists = localdata.find(bId=>bId===id);
+           if(!isExists && !isExistsReadList){
+            console.log(localdata);
+            localdata.push(id);
+            localStorage.setItem(key,JSON.stringify(localdata))
+
+           }
+   
+    }
+ 
 
     const { bookId, image, bookName, author, tags, rating, category, yearOfPublishing, publisher, totalPages, review } = detailsData;
 
@@ -42,8 +85,8 @@ const DisplayDetailsCard = ({ detailsData }) => {
                 </div>
                 </div>
                 <div className='my-5'>
-                <button className='btn btn-outline '>Read</button>
-                <button className=" btn primary-Btn ml-4 " style={{ backgroundColor: '#59C6D2' }}>Wishlist</button>
+                <button onClick={()=>readBtnHandel(bookId,'readList')} className='btn btn-outline '>Read</button>
+                <button onClick={()=>wishBtnHandel(bookId,'wishList')} className=" btn primary-Btn ml-4 " style={{ backgroundColor: '#59C6D2' }}>Wishlist</button>
                 </div>
                
             </div>

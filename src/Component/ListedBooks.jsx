@@ -31,10 +31,6 @@ useEffect(() => {
 }, []);
 
 
-
-
-
-
     const localWishData = getLocalStoreData('wishList')
     const wishBookDat = bookDatas.filter(data => localWishData.includes(data.bookId));
 

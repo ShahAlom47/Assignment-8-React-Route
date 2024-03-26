@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const DisplayFavBook = ({ book }) => {
     console.log(book);
 
-    const { bookId, image, bookName, author, tags, rating, category } = book;
+    const { bookId, image, bookName, author,  rating, category } = book;
     return (
         <div className="my-10">
             <div className=" rounded-lg border-4 p-5 flex gap-2 w-6/12 m-auto">
@@ -30,3 +30,6 @@ const DisplayFavBook = ({ book }) => {
 };
 
 export default DisplayFavBook;
+DisplayFavBook.propTypes = {
+    book:PropTypes.object.isRequired
+    }

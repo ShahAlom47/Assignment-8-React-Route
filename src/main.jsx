@@ -13,6 +13,7 @@ import ListedBooks from './Component/ListedBooks';
 import PageToRead from './Component/PageToRead';
 import BookDetails from './Component/BookDetails';
 import FavoriteBook from './Component/FavoriteBook';
+import Blog from './Component/Blog';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
       {
         path: "/favorit",
         element: <FavoriteBook></FavoriteBook>,
+        
+      },
+      {
+        path: "/blog",
+        element:<Blog></Blog>,
         
       },
     ]

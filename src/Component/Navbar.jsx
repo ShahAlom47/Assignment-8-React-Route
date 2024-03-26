@@ -20,10 +20,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-3">
-                    <NavLink className='font-semibold text-gray-500 hover:bg-slate-200 rounded-md' to={'/'}>Home</NavLink>
-                  <NavLink to={'/listedBook'} className='font-semibold hover:bg-slate-200 rounded-md text-gray-500'>Listed Books</NavLink>
-                  <NavLink to={'/favorit'} className='font-semibold hover:bg-slate-200 rounded-md text-gray-500'>Favorite Book</NavLink>
+                    <NavLink to={'/'} className='font-semibold text-gray-500 hover:bg-slate-200 rounded-md' >Home</NavLink>
+                    <NavLink to={'/listedBook'} className='font-semibold hover:bg-slate-200 rounded-md text-gray-500'>Listed Books</NavLink>
+                    <NavLink to={'/favorit'} className='font-semibold hover:bg-slate-200 rounded-md text-gray-500'>Favorite Book</NavLink>
                     <NavLink to={'/pageRead'} className='font-semibold text-gray-500 hover:bg-slate-200 rounded-md'> Page to Read</NavLink>
+                    <NavLink to={'/blog'} className='font-semibold text-gray-500 hover:bg-slate-200 rounded-md'> Blog</NavLink>
                 </ul>
             </div>
             <div className="navbar-end">

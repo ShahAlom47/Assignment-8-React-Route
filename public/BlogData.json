@@ -1,0 +1,77 @@
+{
+    "reviews": [
+      {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "rating": 4.5,
+        "review": "The Great Gatsby is a timeless classic that delves into the complexities of the American Dream. Fitzgerald's prose is elegant, and his characters are vividly portrayed. However, the slow pacing may not appeal to all readers.",
+        "image": "great_gatsby.jpg",
+        "genre": "Fiction",
+        "date_published": "1925-04-10"
+      },
+      {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "rating": 5,
+        "review": "To Kill a Mockingbird is a poignant masterpiece that addresses themes of racial injustice and moral growth. Harper Lee's storytelling is compelling, and her characters are unforgettable. A must-read for all ages.",
+        "image": "to_kill_mockingbird.jpg",
+        "genre": "Fiction",
+        "date_published": "1960-07-11"
+      },
+      {
+        "title": "1984",
+        "author": "George Orwell",
+        "rating": 4.8,
+        "review": "1984 is a chilling dystopian novel that remains eerily relevant today. Orwell's depiction of a totalitarian regime is both terrifying and thought-provoking. The bleak atmosphere and profound ideas make it a must-read for fans of speculative fiction.",
+        "image": "1984.jpg",
+        "genre": "Science Fiction",
+        "date_published": "1949-06-08"
+      },
+      {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "rating": 4.7,
+        "review": "Pride and Prejudice is a delightful romantic comedy of manners. Austen's wit and social commentary shine through her memorable characters and sparkling dialogue. A timeless classic that continues to enchant readers.",
+        "image": "pride_and_prejudice.jpg",
+        "genre": "Romance",
+        "date_published": "1813-01-28"
+      },
+      {
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "rating": 4,
+        "review": "The Catcher in the Rye is a coming-of-age novel that captures the disillusionment of adolescence. Salinger's protagonist, Holden Caulfield, is both endearing and frustrating as he navigates the complexities of growing up. While some may find the narrative meandering, its impact on literature is undeniable.",
+        "image": "catcher_in_the_rye.jpg",
+        "genre": "Fiction",
+        "date_published": "1951-07-16"
+      },
+      {
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "rating": 5,
+        "review": "The Lord of the Rings is a monumental fantasy epic that transports readers to a richly imagined world. Tolkien's masterful world-building, epic battles, and themes of friendship and heroism make it a timeless classic. A must-read for fantasy enthusiasts.",
+        "image": "lord_of_the_rings.jpg",
+        "genre": "Fantasy",
+        "date_published": "1954-07-29"
+      },
+      {
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "rating": 4.9,
+        "review": "The Hitchhiker's Guide to the Galaxy is a hilarious and inventive science fiction romp across the universe. Adams' wit and imagination shine through in every page, making it a joy to read for fans of humor and speculative fiction.",
+        "image": "hitchhikers_guide.jpg",
+        "genre": "Science Fiction",
+        "date_published": "1979-10-12"
+      },
+      {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "rating": 4.8,
+        "review": "Harry Potter and the Philosopher's Stone is a magical adventure that captivates readers of all ages. Rowling's wizarding world is filled with wonder and excitement, and her characters are lovable and relatable. The start of an unforgettable journey.",
+        "image": "harry_potter_philosophers_stone.jpg",
+        "genre": "Fantasy",
+        "date_published": "1997-06-26"
+      }
+    ]
+  }
+  

@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 const DisplayFavBook = ({ book }) => {
     console.log(book);
 
-    const { bookId, image, bookName, author,  rating, category } = book;
+    const { bookId, image, bookName, author, rating, category } = book;
     return (
         <div className="my-10">
-            <div className=" rounded-lg border-4 p-5 flex gap-2 w-6/12 m-auto">
+            <div className="  flex-col lg:flex-row rounded-lg border-4 p-5 flex gap-2 lg:w-6/12 m-auto">
 
-                <div className="w-3/1 h-32">
-                    <img className="h-full" src={image} alt="" />
+                <div className=" lg:w-3/12 lg:h-32 h-40 bg-slate-200 rounded-xl p-2 flex justify-center items-center ">
+                    <img className="h-full rounded-xl" src={image} alt="" />
 
                 </div>
 
@@ -21,7 +21,7 @@ const DisplayFavBook = ({ book }) => {
                     <p className="text-black font-semibold  ">Rating: {rating}</p>
                 </div>
                 <div className="flex items-center">
-                <Link to={`/bookDtails/${bookId}`}><button className="primary-Btn pbtn my-auto  ">View Details</button></Link>           
+                    <Link to={`/bookDtails/${bookId}`}><button className="primary-Btn pbtn my-auto  ">View Details</button></Link>
                 </div>
             </div>
 
@@ -31,5 +31,5 @@ const DisplayFavBook = ({ book }) => {
 
 export default DisplayFavBook;
 DisplayFavBook.propTypes = {
-    book:PropTypes.object.isRequired
-    }
+    book: PropTypes.object.isRequired
+}

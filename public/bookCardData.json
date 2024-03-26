@@ -8,7 +8,7 @@
       "totalPages": 336,
       "rating": 4.5,
       "category": "Fiction",
-      "tags": ["Classic", "Legal Drama", "Southern Gothic"],
+      "tags": ["Classic", "Legal Drama"],
       "publisher": "J.B. Lippincott & Co.",
       "yearOfPublishing": 1960
     },
@@ -60,7 +60,7 @@
       "totalPages": 320,
       "rating": 4.9,
       "category": "Fantasy",
-      "tags": ["Wizardry", "Magic", "Children's Literature"],
+      "tags": ["Wizardry", "Magic"],
       "publisher": "Bloomsbury",
       "yearOfPublishing": 1997
     },

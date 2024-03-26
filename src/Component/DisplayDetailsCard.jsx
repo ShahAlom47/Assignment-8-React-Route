@@ -89,8 +89,10 @@ const [click,setClick]=useState(false);
    
     console.log(bookId);
     return (
-        <div className="flex bg-base-100 shadow-xl my-10 p-4">
+        <div className="flex flex-col lg:flex-row bg-base-100 shadow-xl my-10 p-4">
+            <div className='flex justify-center items-center'>
             <figure className='w-4/1 '><img className='rounded-lg' src={image} alt="Movie" /></figure>
+            </div> 
             <div className=" flex flex-col space-y-3 p-6">
                 <h2 className="card-title">{bookName}</h2>
                 <p className='text-start font-medium  text-gray-500 flex-1'>By :{author}</p>
@@ -124,10 +126,10 @@ const [click,setClick]=useState(false);
                     <p className="text-black font-semibold  ">{rating}</p>
                 </div>
                 </div>
-                <div className='my-5 flex'>
+                <div className='my-5 flex gap-2  tems-center flex-col lg:flex-row'>
                 <button onClick={()=>readBtnHandel(bookId,'readList')} className='btn btn-outline '>Read</button>
-                <button onClick={()=>wishBtnHandel(bookId,'wishList')} className=" btn primary-Btn ml-4 " style={{ backgroundColor: '#59C6D2' }}>Wishlist</button>
-                <button onClick={()=>favBtnHandel(bookId,'favList')} className="  ml-4 flex items-center  px-3 btn "  >{click?  <IoIosHeart /> :<CiHeart /> }  Add to Favorite</button>
+                <button onClick={()=>wishBtnHandel(bookId,'wishList')} className=" btn primary-Btn lg:ml-4 " style={{ backgroundColor: '#59C6D2' }}>Wishlist</button>
+                <button onClick={()=>favBtnHandel(bookId,'favList')} className="  lg:ml-4 flex items-center  px-3 btn "  >{click?  <IoIosHeart /> :<CiHeart /> }  Add to Favorite</button>
                 </div>
                
             </div>

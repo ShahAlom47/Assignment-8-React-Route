@@ -12,6 +12,7 @@ import Home from './Component/Home';
 import ListedBooks from './Component/ListedBooks';
 import PageToRead from './Component/PageToRead';
 import BookDetails from './Component/BookDetails';
+import FavoriteBook from './Component/FavoriteBook';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: "/bookDtails/:bookid",
         element: <BookDetails></BookDetails>,
+        
+      },
+      {
+        path: "/favorit",
+        element: <FavoriteBook></FavoriteBook>,
         
       },
     ]

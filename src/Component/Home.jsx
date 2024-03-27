@@ -19,7 +19,7 @@ const Home = () => {
 
  useEffect(()=>{
 
-    cardDatas.length<6?  setMore(true): setMore(false)
+    getData.length<6?  setMore(true): setMore(false)
     const xx= getData.slice(0,6)
     setCardDatas(xx)
 

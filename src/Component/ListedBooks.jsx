@@ -48,24 +48,30 @@ useEffect(() => {
        
         if (sortBy === 'raiting') {
 
-            const data=[...readBookDat]
-            data.sort(function (a, b) { return a.rating - b.rating });
-            // console.log(data);
-           setSortData(data)
-           setWishData(data)
+            const dataR=[...readBookDat]
+            const dataW=[...wishBookDat]
+            dataR.sort(function (a, b) { return a.rating - b.rating });
+            dataW.sort(function (a, b) { return a.rating - b.rating });
+           
+           setSortData(dataR)
+           setWishData(dataW)
         }
         else if (sortBy === 'yearOfPublishing') {
-            const data=[...readBookDat]
-            data.sort(function (a, b) { return a.yearOfPublishing - b.yearOfPublishing });
-            setSortData(data)
-            setWishData(data)
+            const dataR=[...readBookDat]
+            const dataW=[...wishBookDat]
+            dataR.sort(function (a, b) { return a.yearOfPublishing - b.yearOfPublishing });
+            dataW.sort(function (a, b) { return a.yearOfPublishing - b.yearOfPublishing });
+            setSortData(dataR)
+            setWishData(dataW)
         }
         else if (sortBy === 'totalPages') {
-            const data=[...readBookDat] 
-            bookDatas.sort(function (a, b) { return a.totalPages - b.totalPages });
+            const dataR=[...readBookDat]
+            const dataW=[...wishBookDat]
+            dataR.sort(function (a, b) { return a.totalPages - b.totalPages });
+            dataW.sort(function (a, b) { return a.totalPages - b.totalPages });
             // console.log(data);
-            setSortData(data)
-            setWishData(data)
+            setSortData(dataR)
+            setWishData(dataW)
         }
     }
 

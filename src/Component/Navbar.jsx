@@ -21,7 +21,7 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-2xl lg:text-3xl font-bold pl-0">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 space-x-3">
+                <ul className="menu menu-horizontal px-1 space-x-4">
                     <NavLink to={'/'} className='font-semibold text-gray-500 hover:bg-slate-200 rounded-md' >Home</NavLink>
                     <NavLink to={'/listedBook'} className='font-semibold hover:bg-slate-200 rounded-md text-gray-500'>Listed Books</NavLink>
                     <NavLink to={'/favorit'} className='font-semibold hover:bg-slate-200 rounded-md text-gray-500'>Favorite Book</NavLink>

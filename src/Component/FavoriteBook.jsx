@@ -18,6 +18,14 @@ const FavoriteBook = () => {
     const datas = useGetdata();
 
     const readBookDat = datas.filter(data => LocalSdata.includes(data.bookId));
+    if(readBookDat.length <= 0){
+      
+        return (
+            <div className="text-2xl text-center font-bold py-6">
+               No book added
+            </div>
+        )
+    }
    
    
     return (

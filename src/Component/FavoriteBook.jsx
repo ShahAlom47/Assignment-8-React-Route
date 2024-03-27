@@ -21,7 +21,10 @@ const FavoriteBook = () => {
     if(readBookDat.length <= 0){
       
         return (
-            <div className="text-2xl text-center font-bold py-6">
+            <div className="text-2xl text-center font-bold py-6 ">
+                <div className="bg-gray-300 p-6 rounded-lg my-3 ">
+                <h1 className="text-center font-bold text-3xl">Favorite Books</h1>
+            </div>
                No book added
             </div>
         )
@@ -30,6 +33,9 @@ const FavoriteBook = () => {
    
     return (
         <div>
+            <div className="bg-gray-300 p-6 rounded-lg my-3">
+                <h1 className="text-center font-bold text-3xl">Favorite Books</h1>
+            </div>
             {
                 readBookDat.map((book,indx)=> <DisplayFavBook book={book} key={indx}></DisplayFavBook>)
             }

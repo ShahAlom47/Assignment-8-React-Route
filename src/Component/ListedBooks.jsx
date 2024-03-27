@@ -87,10 +87,10 @@ useEffect(() => {
                 <h1 className="text-center font-bold text-3xl">Books</h1>
             </div>
             <div className="flex justify-center">
-                <div className="dropdown p-6  mx-auto">
-                    <div tabIndex={0} role="button" className="  primary-Btn m-1">Sort By &#8681;</div>
+                <div className="dropdown my-6  mx-auto bg-gray-100">
+                    <div tabIndex={0} role="button" className=" text-center primary-Btn  w-52">Sort By &#8681;</div>
 
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-gray-100 rounded-box border-2 justify-center items-center w-52">
                         <li onClick={() => sortHandel('raiting')}><a>Raiting</a></li>
                         <li onClick={() => sortHandel('yearOfPublishing')}><a>Year of Publishing</a></li>
                         <li onClick={() => sortHandel('totalPages')} ><a>Pages</a></li>

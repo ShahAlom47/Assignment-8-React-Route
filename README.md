@@ -3,7 +3,7 @@
 
 # Book Vibe
 
-[Live Site URL](https://www.amarbookjunction.com)
+[Live Site URL](https://assignment-8-react-route.netlify.app/blog)
 
 
 
